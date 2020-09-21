@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles-app-loading.scss",
               "src/styles.sass"
             ],
             "scripts": []
@@ -123,6 +124,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "desafio-github"
+    }
+  },
+  "defaultProject": "desafio-github",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "sass"
+    }
+  }
 }
