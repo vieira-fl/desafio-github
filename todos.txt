@@ -1,0 +1,12 @@
+Pendências:
+- alinhar e posicionar os elementos dentro de cada container - OK
+- aplicar placeholder para dados em branco
+- aplicar CSS nos textos - OK
+- colocar barra de procura na view de resultado
+- alinhar e posicionar corretamente os containers entre si
+- ordenar repositorios por estrelas
+- aplicar pontuação de milhares nos números
+- fazer barra de busca realizar nova procura atualizando somente a view de resultado
+
+Extra
+- colocar paginação para visualização dos repositorios
