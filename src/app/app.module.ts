@@ -6,18 +6,22 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LandingSearchComponent } from './components/landing-search/landing-search.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DetalheGithubComponent } from './components/detalhe-github/detalhe-github.component';
+import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
+import { BarraDeBuscaComponent } from './components/barra-de-busca/barra-de-busca.component';
+import { LinkPaginaInicialComponent } from './components/link-pagina-inicial/link-pagina-inicial.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TopSearchBarComponent } from './top-search-bar/top-search-bar.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingSearchComponent,
-    TopBarComponent,
-    TopSearchBarComponent,
+    DetalheGithubComponent,
+    PaginaInicialComponent,
+    BarraDeBuscaComponent,
+    LinkPaginaInicialComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

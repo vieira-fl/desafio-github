@@ -1,0 +1,11 @@
+<!-- search input top bar -->
+<div class="searchInput">
+    <form (ngSubmit)="onSubmit()">
+        <div class="input-group">
+            <input class="form-control" [formControl]="searchText" type="text" name="searchText" value="username">
+            <button type="submit" class="searchButton">
+                <img src="../../../assets/search_icon.png" alt="search icon">
+            </button>
+        </div>
+    </form>
+</div>

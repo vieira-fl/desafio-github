@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 
-import { Repos } from '../models/reposModels';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { map, catchError} from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,20 +12,20 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   userUrl:string = 'https://api.github.com/users';
-  
-  username:string;
+  username;
 
   constructor(
     private http: HttpClient,
   ) { }
   
-  getUser(username){
-    return this.http.get(`${this.userUrl}/${username}`);
+  
+  getUser(username): Observable<any> {
+    return this.http.get(`${this.userUrl}/${username}`)
   }
 
-  getRepos(username):Observable<Repos[]> {
-    return this.http.get<Repos[]>(`${this.userUrl}/${username}/repos`)
-  }
 
+  getRepos(username):Observable<any> {
+    return this.http.get(`${this.userUrl}/${username}/repos`)
+  }
 
 }

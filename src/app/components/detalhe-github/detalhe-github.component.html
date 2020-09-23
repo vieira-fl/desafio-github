@@ -1,36 +1,34 @@
-
-
 <!-- users information -->
 
 <div class="container mainContainer">
     <div class="userInfo">
-        <div *ngIf="user">
+        <app-link-pagina-inicial></app-link-pagina-inicial>
+        <div *ngIf="user" class="espacamento">
             <img src="{{user.avatar_url}}" alt="imagem do Avatar" id="avatar">
             <div>
                 <h2>{{user.name}}</h2>
                 <p>{{user.login}}</p>
             </div>
-            
             <!-- users stats -->
             <div>
                 <div class="userInfobox">
-                    <img src="../../../assets/organization icon.png" alt="">
+                    <img src="../../../assets/organization_icon.png" alt="">
                     <span class="userTextdata">{{user.bio}}</span>
                 </div>        
                 <div class="userInfobox">
-                    <img src="../../../assets/location icon.png" alt="">
+                    <img src="../../../assets/location_icon.png" alt="">
                     <span class="userTextdata">{{user.email}}</span>
                 </div>
                 <div class="userInfobox">
-                    <img src="../../../assets/followers icon.png" alt="">
+                    <img src="../../../assets/followers_icon.png" alt="">
                     <span class="userTextdata">{{user.followers}}</span>
                 </div>
                 <div class="userInfobox">
-                    <img src="../../../assets/following icon.png" alt="" style="height: 24px;">
+                    <img src="../../../assets/following_icon.png" alt="" style="height: 24px;">
                     <span class="userTextdata">{{user.following}}</span>
                 </div>
                 <div class="userInfobox">
-                    <img src="../../../assets/repositorie icon.png" alt="">
+                    <img src="../../../assets/repositorie_icon.png" alt="">
                     <span class="userTextdata">{{user.public_repos}}</span>
                 </div>
             </div>
@@ -38,12 +36,13 @@
     </div>
     <!-- users repositories ordenado pelo número decrescente de estrelas -->
     <div class="reposInfo">
-        <div>
+        <app-barra-de-busca [username]="username"></app-barra-de-busca>
+        <div class="espacamento" *ngIf="user">
             <ul>
-                <li *ngFor="let repo of repository">
+                <li *ngFor="let repo of user.repo">
                     <p class="repoName">{{ repo.name }}</p>
                     <p>{{ repo.description }}</p>
-                    <img src="../../../assets/star icon.png" alt="">
+                    <img src="../../../assets/star_icon.png" alt="">
                     <span class="userTextdata">{{ repo.stargazers_count }}</span>
                 </li>
             </ul>

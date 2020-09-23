@@ -1,13 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LandingSearchComponent } from './components/landing-search/landing-search.component';
-import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DetalheGithubComponent } from './components/detalhe-github/detalhe-github.component';
+import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', component: TopBarComponent },
-  { path: 'users/:username', component: LandingSearchComponent },
+  { path: '', component: PaginaInicialComponent },
+  { path: 'users/:username', component: DetalheGithubComponent },
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '404' }
 ];
+
+//The two asterisks, **, indicate to Angular that this routes definition is a wildcard route. 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

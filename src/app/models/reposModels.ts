@@ -1,5 +1,5 @@
-export class Repos {
-    name:string;
-    description:string;
-    stars:number;
-}
+// export interface Repos {
+//     name:string;
+//     description:string;
+//     stargazers_count:number;
+// }

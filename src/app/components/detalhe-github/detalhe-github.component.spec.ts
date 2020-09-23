@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopSearchBarComponent } from './top-search-bar.component';
+import { DetalheGithubComponent } from './detalhe-github.component';
 
-describe('TopSearchBarComponent', () => {
-  let component: TopSearchBarComponent;
-  let fixture: ComponentFixture<TopSearchBarComponent>;
+describe('DetalheGithubComponent', () => {
+  let component: DetalheGithubComponent;
+  let fixture: ComponentFixture<DetalheGithubComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TopSearchBarComponent ]
+      declarations: [ DetalheGithubComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopSearchBarComponent);
+    fixture = TestBed.createComponent(DetalheGithubComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
